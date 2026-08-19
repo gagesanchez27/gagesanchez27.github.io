@@ -30,8 +30,9 @@ body {
 }
 
 .index-page {
-  font-family: "Trebuchet MS", Arial, sans-serif;
+  min-height: 100vh;
   background: #8b001b;
+  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 .index-page nav {
@@ -47,7 +48,8 @@ body {
   letter-spacing: 0.08em;
 }
 
-.index-page nav h1 {
+.index-page nav h1,
+.index-page #interests h3 {
   color: #ed8da0;
 }
 
@@ -56,15 +58,13 @@ body {
   color: #ffffff;
   font-weight: 800;
   letter-spacing: 0.05em;
-  box-shadow: 0 4px 0 #8f0022;
-  transform: translateY(0);
+  box-shadow: 0 4px 0 #650014;
 }
 
 .index-page .nav-li a:hover {
   background: #ffffff;
   color: #8b001b;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 0 #8f0022;
+  box-shadow: 0 6px 0 #650014;
 }
 
 .index-page .content h2 {
@@ -77,15 +77,11 @@ body {
   font-weight: 700;
 }
 
-.index-page #interests h3 {
-  color: #ed8da0;
-}
-
 .index-page #interests li {
   background: #b01030;
   color: #ffffff;
-  border-color: #ffffff;
-  box-shadow: 0 4px 0 #8f0022;
+  border-color: #ed8da0;
+  box-shadow: 0 4px 0 #650014;
 }
 
 .index-page #interests li:hover {
@@ -180,7 +176,7 @@ h2 {
   border-color: #000;
   transform: translateY(-2px);
 }
-sidebar-img {
+.sidebar-img {
   width: 100%;
   max-width: 760px;
   aspect-ratio: 3 / 4;
@@ -297,53 +293,60 @@ nav h1 {
 
 #portfolio a:hover::after {
   opacity: 1;
+}
 
-  @media screen and (min-width: 120px) and (max-width: 1080px) {
-    main {
-      height: 100ch;
-      zoom: 1.5;
-      display: grid;
-    }
-
-    h1 {
-      font-size: 44px;
-    }
-
-    h2 {
-      font-size: 42px;
-    }
-
-    h3 {
-      font-size: 36px;
-    }
-
-    #all-contents {
-      height: 100ch;
-      margin: none;
-    }
-
-    a {
-      font-size: 42px;
-    }
-
-    .sidebar {
-      margin-right: 0px;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .sidebar-img {
-      width: 100%;
-    }
-
-    p,
-    li {
-      font-size: 24px;
-    }
-
-    .content {
-      align-content: center;
-      justify-content: center;
-    }
+@media screen and (min-width: 120px) and (max-width: 1080px) {
+  main {
+    height: 100ch;
+    zoom: 1.5;
+    display: grid;
   }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  h3 {
+    font-size: 36px;
+  }
+
+  #all-contents {
+    height: 100ch;
+    margin: 0;
+  }
+
+  a {
+    font-size: 42px;
+  }
+
+  .sidebar {
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar-img {
+    width: 100%;
+  }
+
+  p,
+  li {
+    font-size: 24px;
+  }
+
+  .content {
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+.index-page .sidebar-img {
+  width: 474px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: auto;
 }
