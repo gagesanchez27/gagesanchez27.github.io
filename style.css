@@ -9,6 +9,91 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
+.portfolio-page {
+  min-height: 100vh;
+  background: url("background.jpg") center center / cover fixed no-repeat;
+}
+
+.portfolio-page nav {
+  background: rgba(74, 88, 104, 0.9);
+  border-color: rgba(210, 220, 230, 0.65);
+}
+
+.portfolio-page nav h1,
+.portfolio-page .nav-li a {
+  color: #d8e1ea;
+}
+
+.portfolio-page .nav-li a:hover {
+  background: rgba(35, 45, 56, 0.8);
+  color: #ffffff;
+}
+
+.index-page {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background: #8b001b;
+}
+
+.index-page nav {
+  background: #3d000d;
+  border: 2px solid #c4455d;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.index-page nav h1,
+.index-page h2,
+.index-page h3 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.index-page nav h1 {
+  color: #ed8da0;
+}
+
+.index-page .nav-li a {
+  background: #b01030;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 0 #8f0022;
+  transform: translateY(0);
+}
+
+.index-page .nav-li a:hover {
+  background: #ffffff;
+  color: #8b001b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #8f0022;
+}
+
+.index-page .content h2 {
+  color: #ffffff;
+  text-shadow: 4px 4px 0 #3d000d;
+}
+
+.index-page .content > p {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.index-page #interests h3 {
+  color: #ed8da0;
+}
+
+.index-page #interests li {
+  background: #b01030;
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 4px 0 #8f0022;
+}
+
+.index-page #interests li:hover {
+  background: #ffffff;
+  color: #8b001b;
+  transform: translateY(-3px) scale(1.03);
+}
+
 #all-contents {
   max-width: 1500px;
   min-height: 100vh;
@@ -62,7 +147,7 @@ h2 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #36454F;
+  color: #36454f;
 }
 
 #interests ul {
@@ -190,7 +275,10 @@ nav h1 {
   background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 #portfolio a:hover {
@@ -209,3 +297,53 @@ nav h1 {
 
 #portfolio a:hover::after {
   opacity: 1;
+
+  @media screen and (min-width: 120px) and (max-width: 1080px) {
+    main {
+      height: 100ch;
+      zoom: 1.5;
+      display: grid;
+    }
+
+    h1 {
+      font-size: 44px;
+    }
+
+    h2 {
+      font-size: 42px;
+    }
+
+    h3 {
+      font-size: 36px;
+    }
+
+    #all-contents {
+      height: 100ch;
+      margin: none;
+    }
+
+    a {
+      font-size: 42px;
+    }
+
+    .sidebar {
+      margin-right: 0px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sidebar-img {
+      width: 100%;
+    }
+
+    p,
+    li {
+      font-size: 24px;
+    }
+
+    .content {
+      align-content: center;
+      justify-content: center;
+    }
+  }
+}
