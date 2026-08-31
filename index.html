@@ -1,48 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to My Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <title>Welcome to My Website</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body class="index-page">
+    <div id="all-contents">
+      <nav class="top-nav">
+        <h1>Welcome to My Website</h1>
 
-<body class="index-page"> 
-
-</body>
- 
-  <div id="all-contents">
-    <nav>
-      <h1>Welcome to My Website</h1>
-      <ul id="nav-ul">
-        <li class="nav-li">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="nav-li">
-          <a href="portfolio.html">Portfolio</a>
-        </li>
-      </ul>
-    </nav>
-
-    <main>
-      <div class="sidebar">
-        <img class="sidebar-img" src="https://i.pinimg.com/474x/81/a7/00/81a7006d2d4f5ad49b1d05fe43421096.jpg"
-          alt="Leon S Kennedy" />
-      </div>
-
-      <div class="content">
-        <h2>Gage S.</h2>
-        <p>A student in Operation Spark</p>
-        <div id="interests">
-          <h3>Interests</h3>
-          <ul>
-            <li>Gaming</li>
-            <li>Helping</li>
-            <li>Sleeping</li>
+        <div class="nav-right">
+          <ul id="nav-ul">
+            <li class="nav-li">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="nav-li">
+              <a href="portfolio.html">Portfolio</a>
+            </li>
           </ul>
-        </div>
-      </div>
-    </main>
-  </div>
-</body>
 
+          <div class="clock-wrap" aria-live="polite">
+            <span class="clock-label">Time</span>
+            <span id="live-clock">--:--:--</span>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <div class="sidebar">
+          <img
+            class="sidebar-img"
+            src="https://i.pinimg.com/474x/81/a7/00/81a7006d2d4f5ad49b1d05fe43421096.jpg"
+            alt="Leon S Kennedy"
+          />
+        </div>
+
+        <div class="content">
+          <h2>Gage S.</h2>
+          <p>A student in Operation Spark</p>
+
+          <div id="interests">
+            <h3>Interests</h3>
+            <ul>
+              <li>Gaming</li>
+              <li>Helping</li>
+              <li>Sleeping</li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const clockElement = document.getElementById("live-clock");
+
+      function updateClock() {
+        const now = new Date();
+        clockElement.textContent = now.toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        });
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
+  </body>
 </html>
